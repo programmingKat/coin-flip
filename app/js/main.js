@@ -1,7 +1,8 @@
-document.querySelector('#coin').addEventListener('click', flipCoin)
-function flipCoin(){
-  console.log("inside the function")
-  fetch(`/api/coinFlip`)
+document.querySelector('.user-guess').addEventListener('click', flipCoin)
+function flipCoin(e){
+  //console.log("inside the function")
+  let face = e.target.id
+  fetch(`/api/coinFlip?face=${face}`)
     .then(response => response.json())
     .then((data) => {
       console.log(data);

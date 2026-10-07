@@ -16,9 +16,9 @@ const server = http.createServer(function (req, res) {
     });
   }
 
-  else if(page == '/js/main.js'){
-    fs.readFile('js/main.js', function(err,data){
-      res.writeHead(200 , {'Content-Type': 'text/javascript'});
+  else if (page == '/js/main.js') {
+    fs.readFile('js/main.js', function (err, data) {
+      res.writeHead(200, { 'Content-Type': 'text/javascript' });
       res.write(data);
       res.end();
     });
@@ -30,20 +30,30 @@ const server = http.createServer(function (req, res) {
     });
   }
   else if (page == '/api/coinFlip') {
-    const result = { data: Math.ceil(Math.random()) }
+    let result = {}
+    const coinFlipResult = Math.floor(Math.random() * 2)
+    result.coinflipResult = coinFlipResult
+    result.guess = params.face
+    if (params.face == 'heads' && coinFlipResult == 0 || params.face == 'tails' && coinFlipResult == 1) {
+      result.outcome ="you win"
+    }
+    else {
+      result.outcome = "you lose"
+    }
+
     res.write(JSON.stringify(result));
     res.end();
   }
   // else {
-    // figlet('404!!', function (err, data) {
-    //   if (err) {
-    //     console.log('Something went wrong...');
-    //     console.dir(err);
-    //     return;
-    //   }
-    //   res.write(data);
-    //   res.end();
-    // });
+  // figlet('404!!', function (err, data) {
+  //   if (err) {
+  //     console.log('Something went wrong...');
+  //     console.dir(err);
+  //     return;
+  //   }
+  //   res.write(data);
+  //   res.end();
+  // });
   //   res.end();
   // }
 });
