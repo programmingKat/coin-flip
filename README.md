@@ -1,22 +1,64 @@
-# 💸 Week08 Bootcamp2019a Project: Node Coin Flip Game
+# Coin Flip
 
-### Goal: Create a simple web application that uses the fs and http modules. Use http to create the server and fs to read your html file. Include vanilla ES6 js in a script tag at the bottom of your html file. Try creating a coin flip guessing game
+A heads-or-tails guessing game where a Node.js server flips the coin, built for anyone who wants to see how a browser and a plain HTTP server talk to each other.
 
-### How to submit your code for review:
+**Live app:** [https://your-link-here](https://your-link-here)
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+![Screenshot of the main screen](./screenshots/main.png)
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+## Goal
+
+I built this to practice Node's core `http` and `fs` modules without Express. The server reads and serves the HTML, CSS, and JavaScript files itself, and exposes a small `/api/coinFlip` endpoint. When you pick heads or tails, the browser sends your guess to the server, which flips the coin and responds with JSON saying whether you won.
+
+## Tech Stack
+
+- **Front end:** HTML, CSS, JavaScript (Fetch API)
+- **Back end:** Node.js (`http`, `fs`, `url`, and `querystring` modules)
+- **Hosting:** [GitHub Pages / Netlify / Vercel / Render]
+
+## How to Use
+
+1. Open the [live app](https://your-link-here).
+2. Click **Heads** or **Tails** to make your guess.
+3. The server flips the coin and returns the result and whether you won. For now, the result is logged to the browser console (open DevTools to see it).
+
+## Run Locally
+
+**Requirements:** Node.js
+
+1. Clone the repository and move into the app folder.
+
+   ```bash
+   git clone https://github.com/programmingKat/coin-flip.git
+   cd coin-flip/app
+   ```
+
+2. Install dependencies.
+
+   ```bash
+   npm install
+   ```
+
+3. No `.env` file is needed. The server runs on port 8000.
+
+4. Start the server.
+
+   ```bash
+   node server.js
+   ```
+
+5. Open `http://localhost:8000` in your browser.
+
+## Live App
+
+**Link:** [https://your-link-here](https://your-link-here)
+
+| Making a Guess | Result |
+| --- | --- |
+| ![Heads and Tails buttons](./screenshots/one.png) | ![Coin flip result](./screenshots/two.png) |
+
+## Future Improvements
+
+- Show the result on the page by changing the coin's color and adding an H or T, instead of logging it to the console
+- Add a 404 response for unknown routes (a figlet version is started but commented out)
+- Keep a running count of wins and losses
