@@ -2,10 +2,6 @@
 
 A heads-or-tails guessing game where a Node.js server flips the coin, built for anyone who wants to see how a browser and a plain HTTP server talk to each other.
 
-**Live app:** [https://your-link-here](https://your-link-here)
-
-![Screenshot of the main screen](./screenshots/main.png)
-
 ## Goal
 
 I built this to practice Node's core `http` and `fs` modules without Express. The server reads and serves the HTML, CSS, and JavaScript files itself, and exposes a small `/api/coinFlip` endpoint. When you pick heads or tails, the browser sends your guess to the server, which flips the coin and responds with JSON saying whether you won.
@@ -18,7 +14,7 @@ I built this to practice Node's core `http` and `fs` modules without Express. Th
 
 ## How to Use
 
-1. Open the [live app](https://your-link-here).
+1. Open the [live app](https://coin-flip-52pk.onrender.com/).
 2. Click **Heads** or **Tails** to make your guess.
 3. The server flips the coin and returns the result and whether you won. For now, the result is logged to the browser console (open DevTools to see it).
 
@@ -49,13 +45,11 @@ I built this to practice Node's core `http` and `fs` modules without Express. Th
 
 5. Open `http://localhost:8000` in your browser.
 
-## Live App
-
-**Link:** [https://your-link-here](https://your-link-here)
 
 | Making a Guess | Result |
-| --- | --- |
+
 | ![Heads and Tails buttons](./screenshots/one.png) | ![Coin flip result](./screenshots/two.png) |
+<img width="338" height="186" alt="image" src="https://github.com/user-attachments/assets/7be5b22e-3d76-4e5e-8d77-478abba6e45f" />
 
 ## Future Improvements
 
