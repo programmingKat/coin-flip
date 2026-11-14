@@ -47,8 +47,6 @@ I built this to practice Node's core `http` and `fs` modules without Express. Th
 
 
 | Making a Guess | Result |
-
-| ![Heads and Tails buttons](./screenshots/one.png) | ![Coin flip result](./screenshots/two.png) |
 <img width="338" height="186" alt="image" src="https://github.com/user-attachments/assets/7be5b22e-3d76-4e5e-8d77-478abba6e45f" />
 
 ## Future Improvements
